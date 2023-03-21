@@ -1,0 +1,59 @@
+body {
+   margin: 0px;
+   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.container {
+   display: grid;
+   grid-template-rows: 70px 1fr;
+   min-height: 100vh;
+}
+
+button {
+   background: #f3f3f3;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100;
+   border-radius: 4px;
+   margin: 2;
+   padding: 2;
+}
+
+button:hover {
+   color: blue;
+   background-color: rgba(0, 0, 255, .1);
+   cursor: pointer;
+}
+
+button.active {
+   color: blue;
+   background-color: rgba(0, 0, 255, .1);
+   border: thin solid blue;
+}
+
+div.button-group:not(.active) {
+   display: none;
+}
+
+
+div.button-group.active {
+   display: flex;
+   margin-left: 20;
+   margin-top: 5;
+}
+
+div.button-group.active > div.button-group {
+   margin-top: 0;
+}
+
+#tooltip {
+   display: block;
+   position: absolute;
+   min-width: 200px;
+   top: 20;
+   right: 20;
+   border: 1px solid #dadce0;
+   padding: 2rem;
+}
